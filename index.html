@@ -13,11 +13,9 @@
     <!-- Escena de AR -->
     <a-scene embedded arjs>
         <!-- Marcador para mostrar el modelo GLB -->
-        <a-marker preset="hiro">
-            <a-entity 
-                gltf-model="./assets/modelo.glb" 
-                scale="0.5 0.5 0.5" 
-                position="0 0 0">
+       <a-marker preset="hiro">
+    <a-box position="0 0.5 0" rotation="0 45 0" color="blue"></a-box>
+</a-marker>
             </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
