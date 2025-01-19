@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba GitHub Pages</title>
+    <title>Realidad Aumentada</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.0/aframe/build/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.0/aframe/build/aframe-ar.js"></script>
 </head>
-<body>
-    <h1 style="text-align: center; margin-top: 50px;">¡Hola, GitHub Pages está funcionando!</h1>
+<body style="margin: 0; overflow: hidden;">
+
+    <!-- Escena de AR -->
+    <a-scene embedded arjs>
+        <!-- Marcador para mostrar el modelo GLB -->
+        <a-marker preset="hiro">
+            <a-entity 
+                gltf-model="url(assets/modelo.GLB)" 
+                scale="0.5 0.5 0.5" 
+                position="0 0 0">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+
 </body>
 </html>
 
